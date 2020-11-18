@@ -1,0 +1,34 @@
+
+<app-header></app-header>
+<body style="background-image: url('assets/hexBG.jpg');">
+    <div>
+        <h1 style="text-align: center;">Booking History</h1>
+    </div>
+    <br>
+    <br>
+        <table *ngFor="let details of datalist; let i = index " style="width: 80%; text-align: center; padding-left: 50px; font-size: 18px;">
+            <tr>
+                <th>Name</th>
+                <th>contactNumber</th>
+                <th>Car Model</th>
+                <th>Car Type</th>
+                <th>Service Type</th>
+                <th>Date</th>
+                <th>Amount</th>
+                <th>Address</th>
+            </tr>
+            <br>
+            <tr>
+                <td> {{details.name}}</td>
+                 <td>{{details.contactNumber}}</td>
+                <td>{{details.carModel}}</td>
+                <td>{{details.carType}}</td>
+                <td> {{details.serviceType}}</td>
+                <td>{{details.preferredTime}}</td>
+                <td> {{details.subscription}}</td>
+                <td> {{details.address}}</td> 
+            </tr> 
+        </table>
+</body>
+<br>
+<app-footer></app-footer>

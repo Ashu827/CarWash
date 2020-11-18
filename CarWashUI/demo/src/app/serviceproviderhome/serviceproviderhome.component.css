@@ -1,0 +1,21 @@
+#accept{
+    background-color: #66B2FF;
+    border-radius: 10%;
+    border-style: none;
+    height: 50px;
+    width: 80px;
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+}
+#decline{
+        background-color: red;
+        border-radius: 10%;
+        border-style: none;
+        height: 50px;
+        width: 80px;
+        font-size: 15px;
+        color: white;
+        font-weight: bold;
+    
+}

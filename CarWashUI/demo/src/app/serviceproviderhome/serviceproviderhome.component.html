@@ -1,0 +1,51 @@
+<app-header></app-header>
+
+<body style="background-image: url('assets/hexBG.jpg');">
+    <div>
+
+        <div>
+            <h3>Hello {{name}},<br></h3>
+            <h5>Your are having following service requests, Please accept it or decline it according to your location.
+            </h5>
+        </div>
+        <br>
+            <table *ngFor="let details of detailsList; let i = index "
+                style="width: 90%; text-align: center; padding-left: 10px; font-size: 18px;">
+                <div>
+                    <div style="display: inline-block;">
+                        <tr>
+                            <th>{{i+1}}</th>
+                            <th style="width: 5%;">Name</th>
+                            <th style="width: 10%;">contactNumber</th>
+                            <th style="width: 7%;">Car Model</th>
+                            <th style="width: 7%;">Car Type</th>
+                            <th style="width: 10%;">Service Type</th>
+                            <th style="width: 15%;">Date</th>
+                            <th style="width: 15%;">Address</th>
+                        </tr>
+                        <br>
+                        <tr>
+                            <td></td>
+                            <td style="width: 5%;" >{{details.name}}</td>
+                        <td style="width: 10%;">{{details.contactNumber}}</td>
+                        <td style="width: 10%;">{{details.carModel}}</td>
+                        <td style="width: 10%;">{{details.carType}}</td>
+                        <td style="width: 10%;">{{details.serviceType}}</td>
+                        <td style="width: 15%;">{{details.preferredTime}}</td>
+                        <td style="width: 15%;">{{details.address}}</td>
+                        </tr>
+
+                        <br>
+                        <br>
+                    </div>
+                    <div style="display: inline-block;">
+                        <a (click)="submit(details)"><button type="submit" id="accept">ACCEPT</button></a>&nbsp;&nbsp;
+                        <a href="provider-feedback"><button type="submit" id="decline">DECLINE</button></a>
+                    </div>
+                    <br>
+                </div>
+            </table>
+        
+    </div>
+</body>
+<app-footer></app-footer>

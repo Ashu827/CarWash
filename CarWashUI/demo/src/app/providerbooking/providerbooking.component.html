@@ -1,0 +1,31 @@
+<app-header></app-header>
+<body style="background-image: url('assets/hexBG.jpg');width: 100%;">
+    <div>
+        <h1 style="text-align: center;">Service Requests</h1>
+    </div>
+    <br>
+    <br>
+        <table  style="width: 80%; text-align: center; padding-left: 50px; font-size: 18px;">
+            <tr>
+                <th>Name</th>
+                <th>contactNumber</th>
+                <th>Car Model</th>
+                <th>Car Type</th>
+                <th>Service Type</th>
+                <th>Date </th>
+                <th>Address</th>
+            </tr>
+            <br>
+            <tr>
+                <td> {{providerBooking.name}}</td>
+                 <td>{{providerBooking.contactNumber}}</td>
+                <td>{{providerBooking.carModel}}</td>
+                <td>{{providerBooking.carType}}</td>
+                <td> {{providerBooking.serviceType}}</td>
+                <td>{{providerBooking.preferredTime}}</td>
+                <td> {{providerBooking.address}}</td> 
+            </tr> 
+        </table>
+</body>
+<br>
+<app-footer></app-footer>

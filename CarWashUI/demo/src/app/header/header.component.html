@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<header>
+    <ul class="mainheader" id="navi">
+   
+      <a href = ""><img class="logo" src="assets/logo7.png">
+        <span class="text"> 
+          <address>
+            GoGreen <br><span style="font-style: italic;">Car Wash</span>
+          </address>
+      </span></a>
+      <li class="menu" style="font-size:15px;"><a *ngIf="(isUserLogin) || (isProviderLogin)" href="cust-login" (click)="logout()">Logout</a></li>
+        <li class="menu" style="font-size:15px;"><a *ngIf="isUserLogin" >Hello <br><span style="font-style: italic;">{{name}}</span></a></li>
+        <li class="menu" style="font-size:15px;"><a *ngIf="!(isUserLogin) && !(isProviderLogin)" href="cust-register">Register</a></li>
+        <li class="menu" style="font-size:15px;"><a *ngIf="!(isUserLogin) && !(isProviderLogin)" href="cust-login">Login</a></li>
+        <li class="menu" style="font-size:15px;"><a *ngIf="isUserLogin" (click)="customeraccount()" >MyAccount</a></li>
+        <li class="menu" style="font-size:15px;"><a *ngIf="isProviderLogin" (click)="provideraccount()" >MyAccount</a></li>
+        <li class="menu" style="font-size:15px;"><a (click)="home()">Home</a></li>
+    </ul>
+  </header>
